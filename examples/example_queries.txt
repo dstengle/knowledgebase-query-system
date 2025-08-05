@@ -1,0 +1,46 @@
+# Example Natural Language Queries for KB
+
+## Meeting Queries
+- meetings with John Smith
+- meetings attended by Sarah Chen
+- meetings from last week
+- meetings tagged projects/web
+- John Smith's meetings
+- meetings at Cafe Allegro
+- team meetings from 2024
+
+## Todo Queries  
+- todos assigned to me
+- incomplete todos
+- overdue todos
+- todos due tomorrow
+- todos from meetings with Sarah
+- John's todos
+
+## Document Queries
+- daily notes from this week
+- daily notes tagged urgent
+- documents mentioning Project X
+- recent project documents
+
+## People Queries
+- people who work with John
+- people I haven't met in 6 months
+- frequent collaborators
+- people at Acme Corp
+
+## Relationship Queries
+- stale relationships
+- John's relationships
+- my professional relationships
+
+## Book Queries
+- books by Douglas Adams
+- completed books
+- books rated 5 stars
+- reading list
+
+## Complex Queries
+- meetings with John from last month tagged important
+- overdue todos assigned to Sarah
+- daily notes mentioning Project X from Q1 2024

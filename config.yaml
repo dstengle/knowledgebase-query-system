@@ -1,0 +1,35 @@
+kb_query:
+  ontology:
+    path: "data/kb-vocabulary.ttl"
+    namespaces:
+      kb: "http://example.org/kb/vocab#"
+      foaf: "http://xmlns.com/foaf/0.1/"
+      schema: "http://schema.org/"
+      dcterms: "http://purl.org/dc/terms/"
+      skos: "http://www.w3.org/2004/02/skos/core#"
+  
+  patterns:
+    cache_enabled: true
+    cache_path: "data/pattern_cache.json"
+    enrichment:
+      use_wordnet: true
+      use_embeddings: false
+      embedding_model: "word2vec-google-news-300"
+  
+  query:
+    max_query_length: 200
+    enable_suggestions: true
+    suggestion_threshold: 0.8
+    graphs:
+      - "original"
+      - "inferred" 
+      - "entities"
+    
+  sparql:
+    endpoint: "http://localhost:3030/kb/sparql"
+    timeout: 30
+    limit_default: 100
+    
+  logging:
+    level: "INFO"
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
