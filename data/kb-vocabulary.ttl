@@ -1,33 +1,30 @@
-@prefix kb: <http://example.org/kb/vocab#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix kb: <http://example.org/kb#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-# Sample KB vocabulary for testing
-kb: a owl:Ontology ;
-    rdfs:comment "Personal Knowledge Base Vocabulary" .
+kb:Meeting a owl:Class .
 
-# Classes
-kb:Document a owl:Class ;
-    rdfs:comment "A markdown document" .
+kb:Person a owl:Class .
+    
+kb:Todo a owl:Class .
 
-kb:Meeting a owl:Class ;
-    rdfs:subClassOf kb:Document ;
-    rdfs:comment "Meeting notes" .
+kb:Note a owl:Class .
 
-kb:Person a owl:Class ;
-    rdfs:comment "A person" .
-
-kb:Todo a owl:Class ;
-    rdfs:comment "A todo item" .
-
-# Properties
 kb:hasAttendee a owl:ObjectProperty ;
     rdfs:domain kb:Meeting ;
-    rdfs:range kb:Person ;
-    rdfs:comment "Person who attended meeting" .
-
+    rdfs:range foaf:Person .
+    
 kb:assignedTo a owl:ObjectProperty ;
     rdfs:domain kb:Todo ;
-    rdfs:range kb:Person ;
-    rdfs:comment "Person responsible for todo" .
+    rdfs:range foaf:Person .
+    
+kb:createdBy a owl:ObjectProperty ;
+    rdfs:domain kb:Note ;
+    rdfs:range foaf:Person .
+
+kb:hasTag a owl:DatatypeProperty ;
+    rdfs:domain kb:Meeting ;
+    rdfs:range xsd:string .
